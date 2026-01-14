@@ -1,0 +1,42 @@
+allocations:
+  IBKR:
+    total_capital_usd: 10000
+  CRYPTO:
+    total_capital_usd: 5000
+
+symbols:
+  - venue: IBKR
+    symbol: SPY
+    exchange: ARCA
+    currency: USD
+    strategy: sma_vol_filter
+    params:
+      fast_len: 20
+      slow_len: 50
+      atr_len: 14
+      min_atr_pct: 0.002
+      exposure: 0.25
+      allow_short: false
+      k1: 1.5
+      k2: 3.0
+      max_notional: 10000
+      order_type_preference: LIMIT
+      limit_offset_bps: 5.0
+      time_stop_minutes: 0
+
+  - venue: CRYPTO
+    symbol: BTC-USD
+    strategy: sma_vol_filter
+    params:
+      fast_len: 20
+      slow_len: 50
+      atr_len: 14
+      min_atr_pct: 0.002
+      exposure: 0.25
+      allow_short: false
+      k1: 1.5
+      k2: 3.0
+      max_notional: 5000
+      order_type_preference: LIMIT
+      limit_offset_bps: 5.0
+      time_stop_minutes: 0

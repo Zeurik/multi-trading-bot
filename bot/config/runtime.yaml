@@ -1,0 +1,16 @@
+mode: paper
+live_trading_enabled: false
+timeframe: 5m
+loop_interval_seconds: 5
+lookback_bars: 200
+base_currency: USD
+data_timezone: UTC
+fill_timeout_seconds: 20
+allow_extended_hours: false
+ibkr_host: 127.0.0.1
+ibkr_port: 7497
+ibkr_client_id: 1
+telegram_alerts:
+  enabled: false
+  bot_token: ""
+  chat_id: ""
