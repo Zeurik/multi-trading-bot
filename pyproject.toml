@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-trading-bot"
+version = "0.1.0"
+description = "Multi-asset trading bot framework for IBKR stocks and crypto"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=2.2.0",
+  "numpy>=1.26.0",
+  "pyyaml>=6.0.1",
+  "structlog>=24.1.0",
+]
+
+[project.optional-dependencies]
+ibkr = ["ib_insync>=0.9.86"]
+dev = ["pytest>=8.0.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.setuptools.packages.find]
+include = ["bot*"]
+
+[tool.setuptools.package-data]
+bot = ["config/*.yaml"]

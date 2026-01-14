@@ -1,0 +1,14 @@
+max_notional_per_symbol: 10000
+max_portfolio_gross_exposure: 20000
+max_trades_per_day: 10
+max_trades_per_day_per_symbol: 5
+daily_loss_limit_pct: 0.05
+max_drawdown_pct: 0.1
+cooldown_minutes_after_n_losses: 30
+loss_streak_threshold: 2
+max_spread_bps: 15
+max_volatility: null
+volatility_method: atr_pct
+volatility_window: 14
+min_equity_required: 1000
+kill_switch_path: ./KILL_SWITCH
